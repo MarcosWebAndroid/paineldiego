@@ -1,0 +1,248 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<form  class="z-depth-5"  >
+
+    <div class="responsive-img" style = "padding: 50px;  ">
+
+    
+        <h3> Adicionar Empresa</h3> <br>
+        <h5>Dados da empresa:</h5>
+        <div class = "row">
+    <div  class="input-field col s3"> Nome: 
+        <input  type="text" name = "nome" [(ngModel)] = "dados.nome">
+        <label > </label>
+      </div>
+
+    <div class="input-field col s3">E-mail:
+        <input  type="text" name = "email" [(ngModel)] = "dados.email">
+        <label > </label>
+    </div>
+
+    <div class="input-field col s2">Categoria:
+        <select  class="browser-default" name ="categoria" [(ngModel)] = "dados.categoria">
+            <option value=""  selected>Escolha a Opção</option>
+            <option value="Lojas">Lojas</option>
+            <option value="Animais de Estimação">Animais de Estimação</option>
+            <option value="Assistência Técnica">Assistência Técnica</option>
+            <option value="Automotivo">Automotivo</option>
+            <option value="Bancos e serviços Financeiros">Bancos e serviços Financeiros</option>
+            <option value="Bares">Bares</option>
+            <option value="Beleza & Estética">Beleza & Estética</option>
+            <option value="Casa e Decoração">Casa e Decoração</option>
+            <option value="Educação">Educação</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Hospedagem">Hospedagem</option>
+            <option value="Informática">Informática</option>
+            <option value="Lanches & Café">Lanches & Café</option>
+            <option value="Lazer & Turismo">Lazer & Turismo</option>
+            <option value="Mercados">Mercados</option>
+            <option value="Restaurantes">Restaurantes</option>
+            <option value="Saúde">Saúde</option>
+            <option value="Serviços Locais">Serviços Locais</option>
+           
+           
+          </select>
+        
+    </div>
+    <div class="input-field col s2">Subcategoria:
+        <select  class="browser-default" name = "subcategoria"  [(ngModel)] = "dados.subcategoria">
+            <option value=""  selected>Escolha a Opção</option>
+            <option value="Moda(Roupas e Acessórios)">Moda(Roupas e Acessórios)</option>
+            <option value="" >----CASA E DECORAÇÃO---</option>
+            <option value="Móveis & Decoração">Móveis & Decoração</option>
+            <option value="Móveis Planejados">Móveis Planejados</option>
+            <option value="Material de Construção">Material de Construção</option>
+            <option value="" >----Animais de Estimação--</option>
+            <option value="Abrigos de Animais">Abrigos de Animais</option>
+            <option value="Pet Shops">Pet Shops</option>
+            <option value="Veterinários">Veterinários</option>
+            <option value="" >----Assistência Técnica--</option>
+            <option value="Aparelhos Eletrônicos">Aparelhos Eletrônicos</option>
+            <option value="Eletrodomésticos">Eletrodomésticos</option>
+            <option value="Informática e Telefonia">Informática e Telefonia</option>
+            <option value="" >----Automotivo--</option>
+            <option value="Aluguel de Veículos">Aluguel de Veículos</option>
+            <option value="Auto Elétrica">Auto Elétrica</option>
+            <option value="Concessionárias de Carros">Concessionárias de Carros</option>
+            <option value="Concessionárias de Motos">Concessionárias de Motos</option>
+            <option value="Guincho & Reboque">Guincho & Reboque</option>
+            <option value="Instalação & Conserto de Parabrisas">Instalação & Conserto de Parabrisas</option>
+            <option value="Lanternagem & Pintura">Lanternagem & Pintura</option>
+            <option value="Lava Jato">Lava Jato</option>
+            <option value="Oficinas de Carros">Oficinas de Carros</option>
+            <option value="Oficinas de Motos">Oficinas de Motos</option>
+            <option value="Postos de Gasolina">Postos de Gasolina</option>
+            <option value="Som Automotivo">Som Automotivo</option>
+            <option value="" >----Bancos & Serviços Financeiros--</option>
+            <option value="Bancos">Bancos</option>
+            <option value="Caixas Eletrônicos">Caixas Eletrônicos</option>
+            <option value="Empréstimos">Empréstimos</option>
+            <option value="Lotéricas">Lotéricas</option>
+            <option value="" >----Bares--</option>
+            <option value="Bares & Botecos">Bares & Botecos</option>
+            <option value="Cervejarias">Cervejarias</option>
+            <option value="Pubs">Pubs</option>
+            <option value="" >----Beleza & Estética--</option>
+            <option value="Barbeiros">Barbeiros</option>
+            <option value="Bronzeamento">Bronzeamento</option>
+            <option value="Cabeleireiros">Cabeleireiros</option>
+            <option value="Clínica de Estética">Clínica de Estética</option>
+            <option value="Manicure & Pedicure">Manicure & Pedicure</option>
+            <option value="Maquiadores">Maquiadores</option>
+            <option value="Piercing e Tattoo">Piercing e Tattoo</option>
+            <option value="Salões de Beleza">Salões de Beleza</option>
+            <option value="" >----Casa & Decoração--</option>
+            <option value="Lojas de Tintas">Lojas de Tintas</option>
+            <option value="Materiais de Construção">Materiais de Construção</option>
+            <option value="Móveis & Decoração">Móveis & Decoração</option>
+            <option value="Móveis Planejados">Móveis Planejados</option>
+            <option value="" >----Educação--</option>
+            <option value="Auto Escola">Auto Escola</option>
+            <option value="Creche">Creche</option>
+            <option value="Cursos Preparatórios">Cursos Preparatórios</option>
+            <option value="Cursos Profissionalizantes">Cursos Profissionalizantes</option>
+            <option value="Educação Infantil">Educação Infantil</option>
+            <option value="Ensino Especial">Ensino Especial</option>
+            <option value="Escola de Idiomas">Escola de Idiomas</option>
+            <option value="Escolas de Música">Escolas de Música</option>
+            <option value="Escolas Privadas">Escolas Privadas</option>
+            <option value="Escolas Públicas">Escolas Públicas</option>
+            <option value="Escolas Religiosas">Escolas Religiosas</option>
+            <option value="Escolas Técnicas">Escolas Técnicas</option>
+            <option value="Faculdades & Universidades">Faculdades & Universidades</option>
+          </select>
+        
+    </div>
+    <div class="input-field col s2">Características:
+        <select name = "caracteristica"  class="browser-default"  [(ngModel)] = "dados.caracteristica">
+            <option value=""  selected>Escolha a Opção</option>
+            <option value="Wifi">Wifi</option>
+            <option value="Delivery">Delivery</option>
+            <option value="24 Horas">24 Horas</option>
+          </select>
+        
+    </div>
+
+  
+
+
+</div>
+
+
+<div class = "row">
+
+    <div class="input-field col s6">Endereço:
+        <input   name = "endereco" [(ngModel)] = "dados.endereco">
+        <label > </label>
+    </div>
+    <div class="input-field col s6">Sobre:
+        <textarea   name = "sobre" [(ngModel)] = "dados.sobre"></textarea>
+        <label > </label>
+    </div>
+
+   
+</div>
+
+<div class = "row">
+
+    <div class="input-field col s3">Telefone:
+        <input   name = "telefone" [(ngModel)] = "dados.telefone">
+        <label > </label>
+    </div>
+    <div class="input-field col s3">Horário de abertura do estabelecimento:
+        <input   name = "horario_inicio" [(ngModel)] = "dados.horario_inicio">
+        <label > </label>
+    </div>
+
+    <div class="input-field col s3">Horário de fechamento do estabelecimento:
+        <input   name = "horario_fim" [(ngModel)] = "dados.horario_fim">
+        <label > </label>
+    </div>
+
+    <div class="input-field col s3">Promoção:
+        <select  class="browser-default" name = "promocao"  [(ngModel)] = "dados.promocao">
+            <option value=""  selected>Escolha a Opção</option>
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+            
+          </select>
+        
+    </div>
+
+
+   
+</div>
+
+        <h5>Mídia (Fotos e Vídeo):</h5>
+            <div class = "row">
+        <div class="input-field col s3">Logo:
+            <input type = "file" (change) = "imglogo($event)">
+
+        </div>
+
+        <div class="input-field col s3">Topo:
+            
+            <input type = "file" (change) = "imgtopo($event)">
+        </div>
+        <div class="input-field col s3">Cartões:
+            
+            <input type = "file" (change) = "imgcartao($event)">
+        </div>
+        <div class="input-field col s3">Capa do Vídeo:
+            <input type = "file" (change) = "imgcvideo($event)">
+
+        </div>
+    </div>
+    <div  class="input-field col s3"> Link do vídeo: 
+        <input  type="text" name = "video" [(ngModel)] = "dados.video">
+        <label > </label>
+      </div>
+    <h6>Fotos/Anúncios: </h6>
+    <div class = "row">
+<div class="input-field col s4">Foto 01:
+    
+    <input type = "file" (change) = "imgfoto01($event)">
+    
+</div>
+
+<div class="input-field col s4">Foto 02:
+    
+    <input type = "file" (change) = "imgfoto02($event)">
+</div>
+
+<div class="input-field col s4">Foto 03:
+    
+    <input type = "file" (change) = "imgfoto03($event)">
+</div>
+</div>
+<div class = "row">
+    <div class="input-field col s4">Foto 04:
+        
+        <input type = "file" (change) = "imgfoto04($event)">    
+    </div>
+    
+    <div class="input-field col s4">Foto 05:
+        
+        <input type = "file" (change) = "imgfoto05($event)">    
+    </div>
+    
+    <div class="input-field col s4">Foto 06:
+        
+        <input type = "file" (change) = "imgfoto06($event)">    
+    </div>
+    </div>
+    
+    <div  class="input-field col s3"> Link do mapa: 
+        <input  type="text" name = "video" [(ngModel)] = "dados.mapa">
+        <label > </label>
+      </div>
+   
+
+    
+        <BR><bR>
+
+    <button  align = "center" class="waves-effect waves-light btn" (click) = "adicionar(dados)" type="submit">Atualizar</button>
+</div>
+  </form>

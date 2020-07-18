@@ -1,0 +1,164 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<div  class="z-depth-5" *ngFor="let registro of listas " style = "margin-left: 20px; padding: 30px;">
+  
+    <div class="row">
+<h3 class="input-field col s6" >Dados da Empresa </h3> 
+ <h4 class="input-field col s6" >Avaliação : {{registro.avaliacao}} estrelas</h4>
+    </div>
+ 
+<div class="row" >
+    <form  >
+        <div class="row">
+            <div class= "row">
+          <div class="input-field col s6"> Logo:<Br>
+            <img  height  = "80px" src ="{{registro.img}}" ><Br><br>
+      
+          </div>
+
+         
+            <div   class="input-field col s6"> Topo: <br>
+        
+            <img  height  = "180px" src ="{{registro.topo}}" ><Br><br>
+        
+          </div>
+
+        </div>
+        </div>
+
+      
+       
+
+      <div class="row">
+       
+        <div class="input-field col s6"> Nome:
+          <input     type="text" name = "nome" [(ngModel)] = "registro.nome" readonly>
+          <label></label>
+        </div>
+        <div class="input-field col s6">Telefone: 
+          <input  type="text" name = "telefone" [(ngModel)] = "registro.telefone" readonly>
+          <label > </label>
+        </div>
+      </div>
+   
+      <div class="row">  
+        <div class="input-field col s12">Sobre: 
+          <textarea  type="text" name = "sobre" [(ngModel)] = "registro.sobre" readonly></textarea>
+          <label > </label>
+        </div>
+        
+      </div>
+
+      <div class="row">  
+        <div class="input-field col s12">Endereço: 
+          <input  type="text" name = "endereco" [(ngModel)] = "registro.endereco" readonly>
+          <label > </label>
+        </div>
+        
+      </div>
+
+  
+      <div class="row">
+        <div class="input-field col s6">Email: 
+          <input  type="text" name = "email" [(ngModel)] = "registro.email" readonly>
+          <label > </label>
+        </div>
+     
+        <div class="input-field col s3">Horário de Abertura: 
+          <input  type="text" name = "horario_inicio" [(ngModel)] = "registro.horario_inicio" readonly>
+          <label > </label>
+        </div>
+        <div class="input-field col s3">Horário de fechamento :
+          <input  type="text" name = "horario_fim" [(ngModel)] = "registro.horario_fim" readonly>
+          <label > </label>
+          </div>
+      </div>
+    
+
+      <div class="row">
+        <div>
+        <h5> Cartões : </h5>
+        <img  height  = "80px" src ="{{registro.cartoes}}" ><Br><br>
+        <div class="input-field col s12"> 
+          
+        </div>
+      
+      </div>
+    </div>
+
+    <h5>Anúncios/ Fotos</h5>           
+
+    <div class="row">   
+      <div class="input-field col s4"><b>Foto 01</b><br>
+       
+        <img height = "380px"src = "{{registro.foto01}}">
+           
+      </div>
+   
+      <div class="input-field col s4"><b>Foto 02</b><br>
+       
+        <img height = "380px"src = "{{registro.foto02}}">
+            
+      </div>
+      <div class="input-field col s4"><b>Foto 03</b><br>
+       
+        <img height = "380px"src = "{{registro.foto03}}">
+            
+      </div>
+    </div>
+
+    <div class="row">   
+        <div class="input-field col s4"><b>Foto 04</b><br>
+         
+          <img height = "380px"src = "{{registro.foto04}}">
+              
+        </div>
+     
+        <div class="input-field col s4"><b>Foto 05</b><br>
+         
+          <img height = "380px"src = "{{registro.foto05}}">
+              
+        </div>
+        <div class="input-field col s4"><b>Foto 06</b><br>
+         
+          <img height = "380px"src = "{{registro.foto06}}">
+              
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div>
+        <h5> Capa do vídeo : </h5>
+        <img  height  = "80px" src ="{{registro.capavideo}}" ><Br><br>
+        <div class="input-field col s12"> 
+          
+        </div>
+      
+      </div>
+    </div>
+
+     
+    <div class="row">  
+      <div class="input-field col s6">
+          <h4> Vídeo: </h4>
+          <iframe width="560" height="315" [src]="url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <input  type="text" name = "video" [(ngModel)] = "registro.video" readonly>
+        </div>
+       
+
+
+      
+        <div class="input-field col s6">Link do mapa: 
+          <input  type="text" name = "mapa" [(ngModel)] = "registro.mapa" readonly>
+          <label > </label>
+        </div>
+      </div>
+    </form>
+
+
+  </div>
+
+</div> 

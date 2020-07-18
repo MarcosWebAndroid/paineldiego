@@ -1,0 +1,297 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<div  class="z-depth-5" *ngFor="let registro of listas " style = "margin-top:20px;margin-left: 20px; padding: 30px;">
+  
+    <div class="row">
+<h3 class="input-field col s6" >Dados da Empresa </h3> 
+ <h4 class="input-field col s6" >Avaliação : {{registro.avaliacao}} estrelas</h4>
+    </div>
+ 
+<div class="row"  >
+    <form (ngSubmit) = " atualizar(registro.email) " >
+        <div class="row">
+            <div class= "row">
+          <div class="input-field col s4"> Logo:<Br>
+            <img  height  = "80px" src ="{{registro.img}}" ><Br><br>
+      
+              <input type = "file" (change) = "imglogo($event)">
+          </div>
+
+         
+            <div   class="input-field col s4"> Topo: <br>
+        
+            <img  height  = "180px" src ="{{registro.topo}}" ><Br><br>
+              <input type = "file" (change) = "imgtopo($event)">
+        
+          </div>
+
+          <div class="input-field col s3">Promoção:
+            <select  class="browser-default" name = "promocao"  [(ngModel)] = "registro.promocao">
+                <option value=""  selected>Escolha a Opção</option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+                
+              </select>
+            
+        </div>
+
+
+          
+
+        </div>
+        </div>
+
+      
+       
+
+        <div  class="input-field col s3"> Nome: 
+          <input  type="text" name = "nome" [(ngModel)] = "registro.nome">
+          <label > </label>
+        </div>
+  
+      <div class="input-field col s3">Telefone:
+          <input  type="text" name = "telefone" [(ngModel)] = "registro.telefone">
+          <label > </label>
+      </div>
+  
+      <div class="input-field col s2">Categoria:
+          <select  class="browser-default" name ="categoria" [(ngModel)] = "registro.categoria">
+              <option value=""  selected>Escolha a Opção</option>
+              <option value="Lojas">Lojas</option>
+              <option value="Animais de Estimação">Animais de Estimação</option>
+              <option value="Assistência Técnica">Assistência Técnica</option>
+              <option value="Automotivo">Automotivo</option>
+              <option value="Bancos e serviços Financeiros">Bancos e serviços Financeiros</option>
+              <option value="Bares">Bares</option>
+              <option value="Beleza & Estética">Beleza & Estética</option>
+              <option value="Casa e Decoração">Casa e Decoração</option>
+              <option value="Educação">Educação</option>
+              <option value="Fitness">Fitness</option>
+              <option value="Hospedagem">Hospedagem</option>
+              <option value="Informática">Informática</option>
+              <option value="Lanches & Café">Lanches & Café</option>
+              <option value="Lazer & Turismo">Lazer & Turismo</option>
+              <option value="Mercados">Mercados</option>
+              <option value="Restaurantes">Restaurantes</option>
+              <option value="Saúde">Saúde</option>
+              <option value="Serviços Locais">Serviços Locais</option>
+             
+             
+            </select>
+          
+      </div>
+      <div class="input-field col s2">Subcategoria:
+          <select  class="browser-default" name = "subcategoria"  [(ngModel)] = "registro.subcategoria">
+              <option value=""  selected>Escolha a Opção</option>
+              <option value="Moda(Roupas e Acessórios)">Moda(Roupas e Acessórios)</option>
+              <option value="" >----CASA E DECORAÇÃO---</option>
+              <option value="Móveis & Decoração">Móveis & Decoração</option>
+              <option value="Móveis Planejados">Móveis Planejados</option>
+              <option value="Material de Construção">Material de Construção</option>
+              <option value="" >----Animais de Estimação--</option>
+              <option value="Abrigos de Animais">Abrigos de Animais</option>
+              <option value="Pet Shops">Pet Shops</option>
+              <option value="Veterinários">Veterinários</option>
+              <option value="" >----Assistência Técnica--</option>
+              <option value="Aparelhos Eletrônicos">Aparelhos Eletrônicos</option>
+              <option value="Eletrodomésticos">Eletrodomésticos</option>
+              <option value="Informática e Telefonia">Informática e Telefonia</option>
+              <option value="" >----Automotivo--</option>
+              <option value="Aluguel de Veículos">Aluguel de Veículos</option>
+              <option value="Auto Elétrica">Auto Elétrica</option>
+              <option value="Concessionárias de Carros">Concessionárias de Carros</option>
+              <option value="Concessionárias de Motos">Concessionárias de Motos</option>
+              <option value="Guincho & Reboque">Guincho & Reboque</option>
+              <option value="Instalação & Conserto de Parabrisas">Instalação & Conserto de Parabrisas</option>
+              <option value="Lanternagem & Pintura">Lanternagem & Pintura</option>
+              <option value="Lava Jato">Lava Jato</option>
+              <option value="Oficinas de Carros">Oficinas de Carros</option>
+              <option value="Oficinas de Motos">Oficinas de Motos</option>
+              <option value="Postos de Gasolina">Postos de Gasolina</option>
+              <option value="Som Automotivo">Som Automotivo</option>
+              <option value="" >----Bancos & Serviços Financeiros--</option>
+              <option value="Bancos">Bancos</option>
+              <option value="Caixas Eletrônicos">Caixas Eletrônicos</option>
+              <option value="Empréstimos">Empréstimos</option>
+              <option value="Lotéricas">Lotéricas</option>
+              <option value="" >----Bares--</option>
+              <option value="Bares & Botecos">Bares & Botecos</option>
+              <option value="Cervejarias">Cervejarias</option>
+              <option value="Pubs">Pubs</option>
+              <option value="" >----Beleza & Estética--</option>
+              <option value="Barbeiros">Barbeiros</option>
+              <option value="Bronzeamento">Bronzeamento</option>
+              <option value="Cabeleireiros">Cabeleireiros</option>
+              <option value="Clínica de Estética">Clínica de Estética</option>
+              <option value="Manicure & Pedicure">Manicure & Pedicure</option>
+              <option value="Maquiadores">Maquiadores</option>
+              <option value="Piercing e Tattoo">Piercing e Tattoo</option>
+              <option value="Salões de Beleza">Salões de Beleza</option>
+              <option value="" >----Casa & Decoração--</option>
+              <option value="Lojas de Tintas">Lojas de Tintas</option>
+              <option value="Materiais de Construção">Materiais de Construção</option>
+              <option value="Móveis & Decoração">Móveis & Decoração</option>
+              <option value="Móveis Planejados">Móveis Planejados</option>
+              <option value="" >----Educação--</option>
+              <option value="Auto Escola">Auto Escola</option>
+              <option value="Creche">Creche</option>
+              <option value="Cursos Preparatórios">Cursos Preparatórios</option>
+              <option value="Cursos Profissionalizantes">Cursos Profissionalizantes</option>
+              <option value="Educação Infantil">Educação Infantil</option>
+              <option value="Ensino Especial">Ensino Especial</option>
+              <option value="Escola de Idiomas">Escola de Idiomas</option>
+              <option value="Escolas de Música">Escolas de Música</option>
+              <option value="Escolas Privadas">Escolas Privadas</option>
+              <option value="Escolas Públicas">Escolas Públicas</option>
+              <option value="Escolas Religiosas">Escolas Religiosas</option>
+              <option value="Escolas Técnicas">Escolas Técnicas</option>
+              <option value="Faculdades & Universidades">Faculdades & Universidades</option>
+            </select>
+          
+      </div>
+      <div class="input-field col s2">Características:
+          <select name = "caracteristica"  class="browser-default"  [(ngModel)] = "registro.caracteristica">
+              <option value=""  selected>Escolha a Opção</option>
+              <option value="Wifi">Wifi</option>
+              <option value="Delivery">Delivery</option>
+              <option value="24 Horas">24 Horas</option>
+            </select>
+          
+      </div>
+  
+    
+  
+ 
+  
+  
+   
+      <div class="row">  
+        <div class="input-field col s12">Sobre: 
+          <textarea  type="text" name = "sobre" [(ngModel)] = "registro.sobre"></textarea>
+          <label > </label>
+        </div>
+        
+      </div>
+
+      <div class="row">  
+        <div class="input-field col s12">Endereço: 
+          <input  type="text" name = "endereco" [(ngModel)] = "registro.endereco">
+          <label > </label>
+        </div>
+        
+      </div>
+
+  
+      <div class="row">
+        <div class="input-field col s6">Email: 
+          <input  type="text" name = "email" [(ngModel)] = "registro.email">
+          <label > </label>
+        </div>
+     
+        <div class="input-field col s3">Horário de Abertura: 
+          <input  type="text" name = "horario_inicio" [(ngModel)] = "registro.horario_inicio">
+          <label > </label>
+        </div>
+        <div class="input-field col s3">Horário de fechamento :
+          <input  type="text" name = "horario_fim" [(ngModel)] = "registro.horario_fim">
+          <label > </label>
+          </div>
+      </div>
+    
+
+      <div class="row">
+        <div>
+        <h5> Cartões : </h5>
+        <img  height  = "80px" src ="{{registro.cartoes}}" ><Br><br>
+          <input type = "file" (change) = "imgcartao($event)">
+        <div class="input-field col s12"> 
+          
+        </div>
+      
+      </div>
+    </div>
+
+    <h5>Anúncios/ Fotos</h5>           
+
+    <div class="row">   
+      <div class="input-field col s4"><b>Foto 01</b><br>
+       
+        <img height = "380px"src = "{{registro.foto01}}">
+           
+    <input type = "file" (change) = "imgfoto01($event)">
+      </div>
+   
+      <div class="input-field col s4"><b>Foto 02</b><br>
+       
+        <img height = "380px"src = "{{registro.foto02}}">
+            
+    <input type = "file" (change) = "imgfoto02($event)">
+      </div>
+      <div class="input-field col s4"><b>Foto 03</b><br>
+       
+        <img height = "380px"src = "{{registro.foto03}}">
+            
+    <input type = "file" (change) = "imgfoto03($event)">
+      </div>
+    </div>
+
+    <div class="row">   
+        <div class="input-field col s4"><b>Foto 04</b><br>
+         
+          <img height = "380px"src = "{{registro.foto04}}">
+              
+    <input type = "file" (change) = "imgfoto04($event)">
+        </div>
+     
+        <div class="input-field col s4"><b>Foto 05</b><br>
+         
+          <img height = "380px"src = "{{registro.foto05}}">
+              
+    <input type = "file" (change) = "imgfoto05($event)">
+        </div>
+        <div class="input-field col s4"><b>Foto 06</b><br>
+         
+          <img height = "380px"src = "{{registro.foto06}}">
+              
+    <input type = "file" (change) = "imgfoto06($event)">
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div>
+        <h5> Capa do vídeo : </h5>
+        <img  height  = "80px" src ="{{registro.capavideo}}" ><Br><br>
+          <input type = "file" (change) = "imgcvideo($event)">
+        <div class="input-field col s12"> 
+          
+        </div>
+      
+      </div>
+    </div>
+
+     
+    <div class="row">  
+      <div class="input-field col s6">
+          <h4> Vídeo: </h4>
+          <iframe width="560" height="315" [src]="url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <input  type="text" name = "video" [(ngModel)] = "registro.video">
+        </div>
+       
+
+
+      
+        <div class="input-field col s6">Link do mapa: 
+          <input  type="text" name = "mapa" [(ngModel)] = "registro.mapa">
+          <label > </label>
+        </div>
+      </div>
+    </form>
+
+    <button type = "submit" (click)  = "atualizar(registro)" class="waves-effect waves-light btn" style = "color: white; background-color: #811aa7; margin-left: 20px;" >Atualizar</button>
+
+  </div>
+
+</div> 
